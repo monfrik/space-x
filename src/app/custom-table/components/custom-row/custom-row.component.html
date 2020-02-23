@@ -1,0 +1,3 @@
+<ng-container *ngFor="let item of context">
+  <td class="custom-table-cell" custom-cell [templateCell]="item.cellTemplate.templateRef" [valueCell]="{value: rowData[item.cellTemplate.columnKey]}"></td>
+</ng-container>

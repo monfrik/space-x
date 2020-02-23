@@ -1,0 +1,65 @@
+<div class="history">
+
+  <h2 class="history-title">История запусков</h2>
+
+  <app-custom-table [config]="config">
+
+    <app-custom-column columnName="Id">
+      <ng-template headerCellDef>
+        No.
+      </ng-template>
+      <ng-template cellDef columnKey="id" let-value="value">
+        {{value}}
+      </ng-template>
+    </app-custom-column>
+    
+    <app-custom-column columnName="Title">
+      <ng-template headerCellDef>
+        Title
+      </ng-template>
+      <ng-template cellDef columnKey="title" let-value="value">
+        {{value}}
+      </ng-template>
+    </app-custom-column>
+
+    <app-custom-column columnName="Event_date_utc">
+      <ng-template headerCellDef>
+        Event date utc
+      </ng-template>
+      <ng-template cellDef columnKey="event_date_utc" let-value="value">
+        {{value}}
+      </ng-template>
+    </app-custom-column>
+
+    <app-custom-column columnName="Event_date_unix">
+      <ng-template headerCellDef>
+        Event date unix
+      </ng-template>
+      <ng-template cellDef columnKey="event_date_unix" let-value="value">
+        {{value}}
+      </ng-template>
+    </app-custom-column>
+
+    <app-custom-column columnName="Flight_number">
+      <ng-template headerCellDef>
+        Flight number
+      </ng-template>
+      <ng-template cellDef columnKey="flight_number" let-value="value">
+        {{value}}
+      </ng-template>
+    </app-custom-column>
+
+    <app-custom-column columnName="Details">
+      <ng-template headerCellDef>
+        Details
+      </ng-template>
+      <ng-template cellDef columnKey="details" let-value="value">
+        <p style="max-width: 300px;">
+          {{value}}
+        </p>
+      </ng-template>
+    </app-custom-column>
+
+  </app-custom-table>
+
+</div>

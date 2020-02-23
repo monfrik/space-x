@@ -1,0 +1,38 @@
+.custom-pagination {
+  width: 100%;
+  padding: 1rem .3rem .3rem .3rem;
+  box-sizing: border-box;
+  &-pages {
+    display: flex;
+    justify-content: center;
+  }
+  &-currentpage {
+    text-align: end;
+    font-size: .9rem;
+    color: rgba(#000000, .5);
+    margin: 0;
+  }
+  &-button {
+    display: inline-block;
+    outline: none;
+    margin: 0 .3rem;
+    padding: .3rem;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    &.disabled {
+      opacity: .5;
+    }
+    &:not(.disabled) {
+      color: rgba(#000000, .87);
+      cursor: pointer;
+    }
+  }
+  &-icon {
+    height: .8rem;
+    &__start, &__right {
+      transform: rotateY(180deg);
+    }
+  }
+}

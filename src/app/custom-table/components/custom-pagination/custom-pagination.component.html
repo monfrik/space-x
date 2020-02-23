@@ -1,0 +1,49 @@
+<div class="custom-pagination">
+  <div class="custom-pagination-pages">
+
+    <button
+      class="custom-pagination-button custom-pagination-button__start"
+      [disabled]="pagination.startPageDisabled"
+      [class.disabled]="pagination.startPageDisabled"
+      (click)="selectPage(1)">
+      <object data="/assets/icons/fast-forward.svg" class="custom-pagination-icon custom-pagination-icon__start" type="image/svg+xml"></object>
+    </button>
+
+    <button
+      class="custom-pagination-button custom-pagination-button__left"
+      [disabled]="pagination.startPageDisabled"
+      [class.disabled]="pagination.startPageDisabled" (click)="prevPage()">
+      <object data="/assets/icons/back.svg" class="custom-pagination-icon custom-pagination-icon__left" type="image/svg+xml"></object>
+    </button>
+    
+    <!-- pages -->
+    <ng-container *ngFor="let page of [pagination.firstPage, pagination.secondPage, pagination.thirdPage]">
+      <button
+        class="custom-pagination-button custom-pagination-page"
+        [disabled]="currentPage == page"
+        [class.disabled]="currentPage == page"
+        (click)="selectPage(page)">
+        {{page}}
+      </button>
+    </ng-container>
+    <!-- / pages -->
+
+    <button
+      class="custom-pagination-button custom-pagination-button__right"
+      [disabled]="pagination.lastPageDisabled"
+      [class.disabled]="pagination.lastPageDisabled"
+      (click)="nextPage()">
+      <object data="/assets/icons/back.svg" class="custom-pagination-icon custom-pagination-icon__right" type="image/svg+xml"></object>
+    </button>
+
+    <button
+      class="custom-pagination-button custom-pagination-button__end"
+      [disabled]="pagination.lastPageDisabled"
+      [class.disabled]="pagination.lastPageDisabled"
+      (click)="selectPage(pagination.totalPage)">
+      <object data="/assets/icons/fast-forward.svg" class="custom-pagination-icon custom-pagination-icon__end" type="image/svg+xml"></object>
+    </button>
+
+  </div>
+  <p class="custom-pagination-currentpage">{{currentPage}}/{{pagination.totalPage}}</p>
+</div>

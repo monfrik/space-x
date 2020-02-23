@@ -1,0 +1,16 @@
+.history {
+  width: 100%;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-table {
+    width: 90%;
+  }
+  &-details {
+    width: 40%;
+  }
+  &-pagination {
+    width: 8%;
+  }
+}

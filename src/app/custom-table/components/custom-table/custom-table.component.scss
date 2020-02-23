@@ -1,0 +1,25 @@
+.custom-table {
+  border-collapse: collapse;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),
+              0 8px 10px 1px rgba(0,0,0,.14),
+              0 3px 14px 2px rgba(0,0,0,.12);
+  max-width: 95vw;
+  width: 100%;
+  &-table {
+    border-spacing: 0;
+    width: 100%;
+  }
+  th {
+    text-align: start;
+    font-weight: 500;
+    color: rgba(0,0,0,.54);
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(#000000, .12);
+    &:first-child {
+      padding-left: 1rem;
+    }
+    &:last-child {
+      padding-right: 1rem;
+    }
+  }
+}
